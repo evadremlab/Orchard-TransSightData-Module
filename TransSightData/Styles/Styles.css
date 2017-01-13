@@ -1,0 +1,24 @@
+#ts-data table {
+    width: 100%;
+    border: 1px solid #111;
+    border-collapse: collapse;
+}
+#ts-data th,
+#ts-data td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+#ts-data th {
+    font-weight: bold;
+    background-color: #eee;
+}
+#ts-data td:first-child {
+    width: 30rem;
+}
+#ts-data tr:not(th):hover {
+    background-color: #eef;
+}
+#ts-data .url {
+    font-size: 1.5rem;
+    font-weight: normal;
+}

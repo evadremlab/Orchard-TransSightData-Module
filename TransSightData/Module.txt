@@ -1,0 +1,10 @@
+﻿name: TransSightData
+antiforgery: enabled
+author: david.balmer@transsight.com
+website: http://transsight.com
+version: 1.0.0
+orchardversion: 1.10.x
+description: The TransSightData module is an example of displaying data that is external to Orchard.
+features:
+    TransSightData:
+        Description: Example of an external data module.

@@ -1,0 +1,31 @@
+﻿@model List<TransSightData.Models.Operator>
+
+@{
+    // IMPORTANT! do not end the @model tag with a semicolon, it will break Orchard code generation.
+
+    // I could not add a reference to System.Web.MVC thru Visual Studio for some reason, so I modified the .csproj file to add:
+    //
+    // <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    //   <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    //   <Private>True</Private>
+    // </Reference>
+
+    var url = "http://api.511.org/transit/operators";
+
+    Style.Include("Styles.css").AtHead();
+}
+<div id="ts-data">
+    <h3>Transit Operators <span class="url">(from @url)</span></h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>WebSite</th>
+        </tr>
+        @foreach (var item in Model) {
+            <tr>
+                <td>@item.Name</td>
+                <td><a target="_blank" href="@item.WebSite">@item.WebSite</a></td>
+            </tr>
+        }
+    </table>
+</div>
